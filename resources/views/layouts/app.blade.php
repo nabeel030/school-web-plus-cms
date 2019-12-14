@@ -55,6 +55,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
 
     @yield('styles')
@@ -103,9 +104,13 @@
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 15px;
+  }
   .sidenav a {font-size: 18px;}
 }
+
+
+
 
 
 hr{
@@ -203,7 +208,7 @@ hr{
             @if(Auth::check())
               <div class="col-lg-3">
 
-                    <div class=sidenav>
+                    <div class="sidenav">
                         <h1 style="text-align: center; color: #9B59B6">WEB CMS</h1>
                         <hr>
                         <a href="{{route('slider.index')}} ">Slider</a>

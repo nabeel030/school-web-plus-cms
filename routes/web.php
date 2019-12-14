@@ -1,29 +1,6 @@
 <?php
 
-use App\SiteSetting;
-use App\About;
-use App\Service;
-use App\Slider;
-use App\Teacher;
-use App\Parents;
-use App\Gallery;
-use App\Course;
-use App\Post;
-use App\Brochure;
-use App\update;
-
-$sitesetting = SiteSetting::first();
-$about = About::first();
-$service = Service::orderBy('created_at', 'desc')->get();
-$slider = Slider::all();
-$teacher = Teacher::orderBy('created_at', 'desc')->take(4)->get();
-$parents = Parents::orderBy('created_at', 'desc')->get();
-$gallery = Gallery::orderBy('created_at', 'desc')->take(4)->get();
-$courses = Course::all();
-$post = Post::orderBy('created_at', 'desc')->take(3)->get();
-$brochure = Brochure::all();
-$news = update::orderBy('created_at', 'desc')->get();
-
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,19 +12,7 @@ $news = update::orderBy('created_at', 'desc')->get();
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::view('/','app.index',['sitesetting' => $sitesetting,
-                                  'about' => $about,
-                                  'services' => $service,
-                                  'slider' => $slider,
-                                  'teachers' => $teacher,
-                                  'parents' => $parents,
-                                  'gallery' => $gallery,
-                                  'courses' => $courses,
-                                  'posts' => $post,
-                                  'brochure' => $brochure,
-                                  'news' => $news,
-                                  ])->name('index');
+Route::get('/','BlogViewController@home_page')->name('index');
 
 Auth::routes();
 
@@ -127,15 +92,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 });
 
 
-Route::view('/about','app.about',['sitesetting' => $sitesetting, 'about' => $about, 'services' =>$service])->name('about');
-Route::view('/certified-teachers','app.teachers',['sitesetting' => $sitesetting, 'teachers' => Teacher::all()])->name('teachers');
+Route::get('/about','BlogViewController@about')->name('about');
+Route::get('/certified-teachers','BlogViewController@certified_teachers')->name('teachers');
 Route::get('/blog', 'BlogViewController@posts')->name('blog');
-Route::view('/contact','app.contact',['sitesetting' => $sitesetting])->name('contact');
+Route::get('/contact','BlogViewController@contact')->name('contact');
 Route::post('/contact-form/store', 'ContactFormController@store')->name('contact.form');
-Route::view('/gallery','app.gallery',['sitesetting' => $sitesetting, 'gallery' => Gallery::orderBy('created_at', 'desc')->get()])->name('gallery');
-Route::view('/classes','app.classes',['sitesetting' => $sitesetting, 'courses' =>$courses])->name('classes');
+Route::get('/gallery','ContactFormController@gallery')->name('gallery');
+Route::get('/classes','ContactFormController@classes')->name('classes');
 Route::get('/blog/category/{name?}/post/{slug}', 'BlogViewController@singlePost')->name('single.post');
 Route::get('/blog/category-id/{id}/{name}/posts', 'BlogViewController@categoryPage')->name('category.page');
 Route::get('/blog/tag-id/{id}/{name?}/posts', 'BlogViewController@tagPage')->name('tag.page');
-Route::view('/career','app.career',['sitesetting' => $sitesetting, 'about' => $about, 'services' =>$service])->name('career');
+Route::get('/career','BlogViewController@career')->name('career');
 Route::post('/career/store/cv', 'CareerController@store')->name('career.cv');

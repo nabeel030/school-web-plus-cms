@@ -16,7 +16,7 @@ class SettingsSeeder extends Seeder
         'address' => '75-A, Block 6,PECHS Karachi, 75300 Pakistan',
         'title' => 'My School',
         'phone' => '0300-0000000',
-        'logo' => 'images/logo.jpeg',
+        'logo' => '/images/logo.jpg',
         'email' => 'nabeelahmed030@gmail.com'
       ]);
     }
