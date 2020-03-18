@@ -97,8 +97,8 @@ Route::get('/certified-teachers','BlogViewController@certified_teachers')->name(
 Route::get('/blog', 'BlogViewController@posts')->name('blog');
 Route::get('/contact','BlogViewController@contact')->name('contact');
 Route::post('/contact-form/store', 'ContactFormController@store')->name('contact.form');
-Route::get('/gallery','ContactFormController@gallery')->name('gallery');
-Route::get('/classes','ContactFormController@classes')->name('classes');
+Route::get('/gallery','BlogViewController@gallery')->name('gallery');
+Route::get('/classes','BlogViewController@classes')->name('classes');
 Route::get('/blog/category/{name?}/post/{slug}', 'BlogViewController@singlePost')->name('single.post');
 Route::get('/blog/category-id/{id}/{name}/posts', 'BlogViewController@categoryPage')->name('category.page');
 Route::get('/blog/tag-id/{id}/{name?}/posts', 'BlogViewController@tagPage')->name('tag.page');
