@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-    </section>	
+    </section>
 
     <section class="ftco-section ftco-no-pt ftc-no-pb">
         <div class="container about_container">
@@ -36,7 +36,7 @@
           <div class="row">
           <p><img id="history" class ="about" src="images/course-1.jpg" alt="Pineapple">
           <b style="color: green; font-size: 25px">Backgound History</b> <br>
-          GM Academy was formally known as Mohammad Ali Jinnah University Social Education Project. It was established in 2004 by great academician Prof. Dr. Abdul Wahab who was former Director of IBA and Vice Chancellor of University of Karachi. When he became the President of Mohammad Ali Jinnah University he felt the instant need of establishing a school in University premises after morning classes for poor families living in surrounding of university. The students were invited from the nearby underprivileged area who cannot afford education, they had been provided free of cost education for more than 12 years. 
+          GM Academy was formally known as Mohammad Ali Jinnah University Social Education Project. It was established in 2004 by great academician Prof. Dr. Abdul Wahab who was former Director of IBA and Vice Chancellor of University of Karachi. When he became the President of Mohammad Ali Jinnah University he felt the instant need of establishing a school in University premises after morning classes for poor families living in surrounding of university. The students were invited from the nearby underprivileged area who cannot afford education, they had been provided free of cost education for more than 12 years.
 
 From May 2017 it is no more associated with Mohammad Ali Jinnah University and working as an independent entity by the name of GM Academy. We are charging a very nominal fee considering the background of these students. To show the care for the humanity, GM Academy also offers free education to the orphan children.
 
