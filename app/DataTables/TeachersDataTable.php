@@ -22,8 +22,8 @@ class TeachersDataTable extends DataTable
                 return '<img src="' . url($object->img) . '" alt="Image" style="border-radius: 50%" width="50px" height="50px">';
             })
             ->addColumn('action', function ($object) {
-                $actions = '<a href="'. route("teacher.edit", [$object->id]) .'" class="btn btn-success"><i class="far fa-edit"></i></a>&nbsp;';
-                $actions .= '<a href="'. route("teacher.delete", [$object->id]) .'" class="btn btn-danger"><i class="fa fa-trash"></i></a>';
+                $actions = '<a href="'. route("teacher.edit", [$object->id]) .'" class="btn btn-outline-success"><i class="far fa-edit"></i></a>&nbsp;';
+                $actions .= '<a href="'. route("teacher.delete", [$object->id]) .'" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>';
 
                 return $actions;
             })
@@ -53,10 +53,10 @@ class TeachersDataTable extends DataTable
         return $this->builder()
             ->setTableId('adminusersdatatable-table')
             ->columns($this->getColumns())
-            ->addAction()
+            ->addAction(['class' => 'text-center'])
             ->minifiedAjax()
             ->dom('Bfrtip')
-            ->orderBy(0);
+            ->orderBy(1);
     }
 
     /**
@@ -92,11 +92,6 @@ class TeachersDataTable extends DataTable
                 'title' => 'Qualification',
                 'width' => '17%'
             ],
-//            Column::make('Image'),
-//            Column::make('Name'),
-//            Column::make('Subject'),
-//            Column::make('Qualification'),
-//            Column::make('Action'),
         ];
     }
 
