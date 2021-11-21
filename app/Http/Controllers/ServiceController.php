@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ServicesDataTable;
 use Illuminate\Http\Request;
 use App\Service;
 use Session;
@@ -13,9 +14,9 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ServicesDataTable $dataTable)
     {
-        return view('admin.service.index')->with('services', Service::all());
+        return $dataTable->render('admin.service.index');
     }
 
     /**

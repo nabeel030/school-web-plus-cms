@@ -18,11 +18,3 @@
 
 {!! $dataTable->scripts() !!}
 @endsection
-
-@push('styles')
-    <style>
-        #adminusersdatatable-table tr {
-            vertical-align: middle !important;
-        }
-    </style>
-@endpush

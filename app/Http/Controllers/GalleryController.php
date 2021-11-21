@@ -9,7 +9,7 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        return view('admin.gallery.index')->with('images', Gallery::orderBy('created_at', 'desc')->get());
+        return view('admin.gallery.index')->with('images', Gallery::orderBy('created_at', 'desc')->paginate(12));
     }
 
     public function create()

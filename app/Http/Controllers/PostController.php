@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\DataTables\PostsDataTable;
 use Illuminate\Support\Str;
 
 use Illuminate\Http\Request;
-use Session;
 use App\Post;
 use App\Category;
 use App\Tag;
@@ -16,9 +16,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(PostsDataTable $dataTable)
     {
-        return view('admin.blog.post.index')->with('posts', Post::orderBy('created_at', 'desc')->get());
+        return $dataTable->render('admin.blog.post.index');
     }
 
     /**

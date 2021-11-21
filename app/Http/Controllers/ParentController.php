@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ReviewsDataTable;
 use Illuminate\Http\Request;
 use App\Parents;
 use Session;
 
 class ParentController extends Controller
 {
-    public function index()
+    public function index(ReviewsDataTable $dataTable)
     {
-        return view('admin.parents.index')->with('parents', Parents::all());
+        return $dataTable->render('admin.parents.index');
     }
 
     public function create()
@@ -33,10 +34,6 @@ class ParentController extends Controller
             $new_img_name = Time().$img->getClientOriginalName();
             $img->move('uploads/parents',$new_img_name);
             $parent->img = '/uploads/parents/'.$new_img_name;
-        }
-
-        else {
-            $parent->img = '/uploads/parents/teacher-2.jpg';
         }
 
         $parent->name = $request->name;

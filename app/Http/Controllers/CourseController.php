@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ClassesDataTable;
 use Illuminate\Http\Request;
 use App\Course;
 use Session;
 
 class CourseController extends Controller
 {
-    public function index()
+    public function index(ClassesDataTable $dataTable)
     {
-        return view('admin.courses.index')->with('courses', Course::orderBy('created_at', 'desc')->get());
+        return $dataTable->render('admin.courses.index');
     }
 
     public function create()

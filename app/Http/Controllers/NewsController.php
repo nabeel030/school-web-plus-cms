@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\NewsDataTable;
 use Illuminate\Http\Request;
 use App\update;
 
@@ -12,11 +13,11 @@ class NewsController extends Controller
         return view('admin.news.create');
     }
 
-    public function index()
+    public function index(NewsDataTable $dataTable)
     {
-        return view('admin.news.index')->with('news', update::all());
+        return $dataTable->render('admin.news.index');
     }
-    
+
     public function store(Request $request)
     {
         $this->validate($request,[

@@ -13,31 +13,29 @@
     </div>
 
     <div class="card-body">
-<table class="table table-hover table-light" id="table_background">
-  <thead id="table_head">
-    <tr>
-      <th scope="col">Image</th>
-      <th scope="col" class="text-right">Delete</th>
-    </tr>
-  </thead>
-  <tbody>
+        <div class="row">
+        @forelse($images as $image)
+            <div class="col-md-4 mb-3">
+               <div class="card">
+                   <div class="card-header">
+                       Posted {{$image->created_at->diffForHumans()}}
+                       <a href="{{route('gallery.delete',['id'=>$image->id])}}" class="btn btn-sm btn-danger float-end">
+                           <i class="fa fa-trash"></i>
+                       </a>
+                   </div>
+                   <div class="card-body">
+                       <img class="card-img-top" src="{{$image->img}}" alt="img" height="170">
+                   </div>
+               </div>
+            </div>
+        @empty
+            <h3>No data</h3>
+        @endforelse
+        </div>
+        <div class="float-end">
+            {{$images->links("pagination::bootstrap-4")}}
+        </div>
 
-    @if($images->count()>0)
-    @foreach($images as $image)
-    <tr>
-      <td><img src="{{$image->img}}" alt="Image" width="50px" height="50px"></td>
-      <td class="text-right"><a href="{{route('gallery.delete',['id'=>$image->id])}}" class="btn btn-danger">X</a></td>
-    </tr>
-    @endforeach
-    @else
-    <tr>
-      <th colspan="5" class="text-center">Gallery is Empty!</th>
-    </tr>
-  @endif
-  </tbody>
-</table>
+    </div>
 </div>
-</div>
-</div>
-
 @stop

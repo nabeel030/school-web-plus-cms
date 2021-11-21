@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\SlidersDataTable;
 use Illuminate\Http\Request;
 use App\Slider;
 use Session;
@@ -13,9 +14,9 @@ class SliderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(SlidersDataTable $dataTable)
     {
-        return view('admin.slider.index')->with('slider', Slider::orderBy('created_at', 'desc')->get());
+        return $dataTable->render('admin.slider.index');
     }
 
     /**

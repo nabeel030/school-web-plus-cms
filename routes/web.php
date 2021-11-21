@@ -83,7 +83,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
   Route::get('/brochure/create','BrochureController@create')->name('brochure.create');
   Route::post('/brochure/store', 'BrochureController@store')->name('brochure.store');
   Route::get('/brochure/index', 'BrochureController@index')->name('brochure.index');
-  Route::get('/brochure/activate/{id}','BrochureController@activate')->name('brochure.enable');
+  Route::get('/brochure/activate/{id}','BrochureController@switchActivation')->name('brochure.enable');
   Route::get('/brochure/deactivate/{id}','BrochureController@deactivate')->name('brochure.disable');
   Route::get('/brochure/delete/{id}', 'BrochureController@delete')->name('brochure.delete');
 

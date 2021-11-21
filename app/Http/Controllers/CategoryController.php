@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\CategoriesDataTable;
 use Illuminate\Http\Request;
 use App\Category;
 use Session;
@@ -13,10 +14,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(CategoriesDataTable $dataTable)
     {
-        $categories = Category::orderBy('created_at', 'desc')->get();
-        return view('admin.blog.category.index')->with('categories', $categories);
+        return $dataTable->render('admin.blog.category.index');
     }
 
     /**

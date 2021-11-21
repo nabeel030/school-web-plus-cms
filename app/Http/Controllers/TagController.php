@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\TagsDataTable;
 use Illuminate\Http\Request;
 use App\Tag;
 use Session;
@@ -13,9 +14,9 @@ class TagController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(TagsDataTable $dataTable)
     {
-        return view('admin.blog.tag.index')->with('tags', Tag::orderBy('created_at', 'desc')->get());
+        return $dataTable->render('admin.blog.tag.index');
     }
 
     /**
