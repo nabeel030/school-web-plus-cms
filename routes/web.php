@@ -97,8 +97,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 });
 
 
-Route::get('/about',  [\App\Http\Livewire\About::class, '__invoke'])->name('about');
-//Route::get('/about','BlogViewController@about')->name('about');
+Route::get('/about','BlogViewController@about')->name('about');
 Route::get('/certified-teachers','BlogViewController@certified_teachers')->name('teachers');
 Route::get('/blog', 'BlogViewController@posts')->name('blog');
 Route::get('/contact','BlogViewController@contact')->name('contact');
