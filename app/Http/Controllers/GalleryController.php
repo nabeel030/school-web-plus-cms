@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Gallery;
-
+use Session;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller

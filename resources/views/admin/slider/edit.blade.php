@@ -2,8 +2,6 @@
 
 @section('content')
 
-@include('includes.validate')
-
 <div class="card">
   <div class="card-header" id="lefttalign">
     Edit Slider Image

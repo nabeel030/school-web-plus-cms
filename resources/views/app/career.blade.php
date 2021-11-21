@@ -22,7 +22,6 @@
                     {{csrf_field()}}
                     <label for="cv">Upload CV</label><br>
                     <input type="file" name="cv"><br>
-                    <p>@include('includes.validate')</p>
                     <div class="text-center">
                         <button type="submit" class="btn btn-lg btn-outline-success">Submit</button>
                     </div>
