@@ -7,8 +7,8 @@
     <div class="card-header" id="lefttalign">
       Classes
 
-      <a href="{{route('course.create')}}" id="rightalign">
-          <button  class="btn btn-outline-success"><i class="fa fa-plus">&nbsp;&nbsp;NEW</i></button>
+      <a href="{{route('course.create')}}" class="float-end">
+          <button  class="btn btn-sm btn-success"><i class="fas fa-plus"></i>&nbsp;Add</button>
       </a>
     </div>
 

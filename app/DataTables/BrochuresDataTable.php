@@ -23,8 +23,8 @@ class BrochuresDataTable extends DataTable
             })
             ->addColumn('action', function ($object) {
                 $btnText = $object->active ? 'Disable' : 'Enable';
-                $actions = '<a href="'. route("brochure.enable", [$object->id]) .'" class="btn btn-outline-success">'.$btnText.'</a>&nbsp;';
-                $actions .= '<a href="'. route("brochure.delete", [$object->id]) .'" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>';
+                $actions = '<a href="'. route("brochure.enable", [$object->id]) .'" class="btn btn-sm btn-outline-success">'.$btnText.'</a>&nbsp;';
+                $actions .= '<a href="'. route("brochure.delete", [$object->id]) .'" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></a>';
 
                 return $actions;
             })

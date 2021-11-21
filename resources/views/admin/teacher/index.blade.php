@@ -7,8 +7,8 @@
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
         Brochures
-        <a href="{{route('brochure.create')}}" id="rightalign">
-            <button  class="btn btn-outline-success"><i class="fa fa-plus">&nbsp;&nbsp;NEW</i></button>
+        <a href="{{route('brochure.create')}}" class="float-end">
+            <button  class="btn btn-sm btn-success"><i class="fas fa-plus"></i>&nbsp;Add</button>
         </a>
     </div>
     <div class="card-body">

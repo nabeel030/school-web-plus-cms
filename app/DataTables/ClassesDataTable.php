@@ -22,8 +22,8 @@ class ClassesDataTable extends DataTable
                 return '<img src="' . url($object->img) . '" alt="Image" style="border-radius: 50%" width="50px" height="50px">';
             })
             ->addColumn('action', function ($object) {
-                $actions = '<a href="'. route("course.edit", [$object->id]) .'" class="btn btn-outline-success"><i class="far fa-edit"></i></a>&nbsp;';
-                $actions .= '<a href="'. route("course.delete", [$object->id]) .'" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>';
+                $actions = '<a href="'. route("course.edit", [$object->id]) .'" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></a>&nbsp;';
+                $actions .= '<a href="'. route("course.delete", [$object->id]) .'" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></a>';
 
                 return $actions;
             })

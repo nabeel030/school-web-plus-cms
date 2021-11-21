@@ -6,8 +6,8 @@
 <div class="card">
     <div class="card-header" id="lefttalign">Gallery
 
-      <a href="{{route('gallery.create')}}" id="rightalign">
-        <button  class="btn btn-outline-success"><i class="fa fa-plus">&nbsp;&nbsp;NEW</i></button>
+      <a href="{{route('gallery.create')}}" class="float-end">
+          <button  class="btn btn-sm btn-success"><i class="fas fa-plus"></i>&nbsp;Add</button>
       </a>
 
     </div>
