@@ -10,6 +10,7 @@
     <script src="{{asset('js/dataTable/jquery.dataTables.min.js')}}"></script>
     <link href="{{asset('css/dataTable/jquery.dataTables.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/dataTable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
     <style>
         table tr {

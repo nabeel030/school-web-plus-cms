@@ -28,7 +28,7 @@ class NewsController extends Controller
             'news' => $request->news
         ]);
 
-        return redirect()->route('news.index');
+        return redirect()->route('news.index')->with('success', 'News added successfully!');
     }
 
     public function edit($id)
@@ -55,6 +55,6 @@ class NewsController extends Controller
     {
         $news = update::find($id);
         $news->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'News deleted successfully!');
     }
 }

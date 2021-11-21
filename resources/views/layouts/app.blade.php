@@ -8,24 +8,14 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4 py-4">
-                  @yield('content')
+                    @include('includes.flash-message')
+                    @yield('content')
                 </div>
             </main>
         </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="{{asset('theme/js/scripts.js')}}"></script>
-
-  <script>
-  @if(Session::has('success'))
-    toastr.success("{{Session::get('success')}}")
-  @endif
-
-  @if(Session::has('info'))
-    toastr.info("{{Session::get('info')}}")
-  @endif
-
-  </script>
 
 @stack('scripts')
 </body>
