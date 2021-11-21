@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4780f3f7eca4ff1d388c90a7cf9d5fb6",
+    "content-hash": "d2795ddb73e55c15da60073e14d780a2",
     "packages": [
         {
             "name": "brick/math",
@@ -2027,6 +2027,60 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.5"
             },
             "time": "2021-05-03T19:11:20+00:00"
+        },
+        {
+            "name": "onecentlin/laravel-adminer",
+            "version": "5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/onecentlin/laravel-adminer.git",
+                "reference": "24403ee8f84b696fa457759c246aafcbdc9a5a98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/onecentlin/laravel-adminer/zipball/24403ee8f84b696fa457759c246aafcbdc9a5a98",
+                "reference": "24403ee8f84b696fa457759c246aafcbdc9a5a98",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.0|~6.0|~7.0|~8.0",
+                "illuminate/routing": "~5.0|~6.0|~7.0|~8.0",
+                "illuminate/support": "~5.0|~6.0|~7.0|~8.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Onecentlin\\Adminer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Winnie Lin",
+                    "email": "onecentlin@gmail.com"
+                }
+            ],
+            "description": "Laravel Adminer Database Manager",
+            "keywords": [
+                "adminer",
+                "database",
+                "laravel5",
+                "laravel6",
+                "laravel7",
+                "laravel8",
+                "management",
+                "mysql",
+                "sqlite"
+            ],
+            "support": {
+                "issues": "https://github.com/onecentlin/laravel-adminer/issues",
+                "source": "https://github.com/onecentlin/laravel-adminer/tree/5.3.0"
+            },
+            "time": "2021-06-21T13:28:20+00:00"
         },
         {
             "name": "opis/closure",
