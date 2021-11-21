@@ -13,7 +13,7 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
     <style>
-        table tr {
+        table tr td{
             vertical-align: middle !important;
         }
     </style>

@@ -23,7 +23,7 @@
                            <i class="fa fa-trash"></i>
                        </a>
                    </div>
-                   <div class="card-body">
+                   <div class="card-body" style="padding: 5px !important;">
                        <img class="card-img-top" src="{{$image->img}}" alt="img" height="170">
                    </div>
                </div>
